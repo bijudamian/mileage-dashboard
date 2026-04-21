@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Mileage Predictor AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
-## Available Scripts
+An ML-powered vehicle mileage prediction app using Random Forest regression trained on real Indian city traffic data. Input your vehicle parameters and get an accurate mileage estimate.
 
-In the project directory, you can run:
+**Live:** [mileage-dashboard.vercel.app](https://mileage-dashboard.vercel.app)
 
-### `npm start`
+## How It Works
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. User inputs vehicle specs (engine size, weight, fuel type, city, etc.)
+2. React frontend sends data to FastAPI backend
+3. Python ML model (Random Forest) generates prediction
+4. Estimated mileage returned and displayed with confidence interval
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ML Model
 
-### `npm test`
+- **Algorithm:** Random Forest Regressor (scikit-learn)
+- **Dataset:** Real Indian city traffic and vehicle data
+- **Features:** Engine displacement, vehicle weight, transmission type, fuel type, city driving conditions
+- **Performance:** R² score on test set documented in `/backend/model_evaluation.py`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+| Layer | Technology |
+|---|---|
+| Frontend | React + Tailwind CSS |
+| Backend | Python + FastAPI |
+| ML Model | scikit-learn (Random Forest) |
+| Data Processing | Pandas + NumPy |
+| Deployment | Vercel (frontend) + Python backend |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/          # React frontend
+backend/      # Python FastAPI + ML model
+  api/        # API route handlers
+  model/      # Trained Random Forest model (.pkl)
+public/       # Static assets
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Backend (Python)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn api.main:app --reload
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Frontend: `http://localhost:3000` | API: `http://localhost:8000`
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT — built by [Biju Damian](https://github.com/bijudamian)
