@@ -6,3 +6,4 @@ Running notes on ongoing development work.
 - reviewed documentation and updated stale sections
 ### 2026-05-03
 - added dark mode support for new components
+- added unit tests for core utility functions
