@@ -7,3 +7,5 @@ Running notes on ongoing development work.
 ### 2026-05-03
 - added dark mode support for new components
 - added unit tests for core utility functions
+### 2026-05-05
+- improved global state management logic
