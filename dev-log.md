@@ -9,3 +9,5 @@ Running notes on ongoing development work.
 - added unit tests for core utility functions
 ### 2026-05-05
 - improved global state management logic
+### 2026-05-06
+- cleaned up git history and removed debug logs
