@@ -11,3 +11,5 @@ Running notes on ongoing development work.
 - improved global state management logic
 ### 2026-05-06
 - cleaned up git history and removed debug logs
+### 2026-05-08
+- fixed minor UI inconsistencies across breakpoints
