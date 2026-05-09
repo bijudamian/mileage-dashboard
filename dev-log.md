@@ -13,3 +13,5 @@ Running notes on ongoing development work.
 - cleaned up git history and removed debug logs
 ### 2026-05-08
 - fixed minor UI inconsistencies across breakpoints
+### 2026-05-09
+- fixed console warnings and deprecated API calls
