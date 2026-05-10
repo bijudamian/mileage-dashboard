@@ -15,3 +15,5 @@ Running notes on ongoing development work.
 - fixed minor UI inconsistencies across breakpoints
 ### 2026-05-09
 - fixed console warnings and deprecated API calls
+### 2026-05-10
+- added unit tests for core utility functions
