@@ -17,3 +17,5 @@ Running notes on ongoing development work.
 - fixed console warnings and deprecated API calls
 ### 2026-05-10
 - added unit tests for core utility functions
+### 2026-05-11
+- refactored component structure for better reusability
