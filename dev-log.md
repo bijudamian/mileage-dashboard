@@ -19,3 +19,5 @@ Running notes on ongoing development work.
 - added unit tests for core utility functions
 ### 2026-05-11
 - refactored component structure for better reusability
+### 2026-05-12
+- added edge case handling for empty states
