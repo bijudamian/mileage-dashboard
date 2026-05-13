@@ -21,3 +21,5 @@ Running notes on ongoing development work.
 - refactored component structure for better reusability
 ### 2026-05-12
 - added edge case handling for empty states
+### 2026-05-13
+- improved error handling in async functions
